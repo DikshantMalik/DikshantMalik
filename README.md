@@ -1,4 +1,4 @@
-👋 Hi, I’m @DikshantMalik. I come from a background of Identity, Enterprise Mobilty & Security & recently Azure technologies.
+👋 Hi, I’m @DikshantMalik. I come from a background of Identity, Enterprise Mobilty & Security and Azure cloud.
 
 📫 How to reach me: 
 - 📧 Email: dikshantmalik@outlook.com
