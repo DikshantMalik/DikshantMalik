@@ -7,9 +7,10 @@ As a Cloud Solution Architect, I am deeply immersed in designing and implementin
 📫 Contact Me:
 
 📧 Email: dikshantmalik@outlook.com
-🌐 LinkedIn: www.linkedin.com/in/dikshant-malik/
-👀 About Me
 
+🌐 LinkedIn: www.linkedin.com/in/dikshant-malik/
+
+👀 About Me
 I am passionate about creating secure and efficient cloud environments. My approach is centered around Zero Trust principles, ensuring that security is not just an afterthought but the foundation of every solution I architect. My work primarily revolves around Microsoft cloud technologies, particularly Entra ID, Intune & Azure Cloud.
 
 🌱 What I Share
