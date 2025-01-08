@@ -1,0 +1,39 @@
+The Challenge: MitM and AiTM Attacks
+In the world of cybersecurity, attacks are evolving faster than defenses can adapt. While Multi-Factor Authentication (MFA) has become a standard to secure accounts, attackers have developed advanced methods like Man-in-the-Middle (MitM) and Adversary-in-the-Middle (AiTM) attacks to bypass even these safeguards.
+
+How MitM and AiTM Work
+These attacks exploit user trust by intercepting authentication traffic. Here’s a simplified breakdown:
+
+The Setup: Attackers create a proxy server that mimics a legitimate login page.
+Phishing the User: A user unknowingly enters their credentials into the fake page.
+Intercepting MFA: When the user completes MFA (e.g., approves a push notification or enters a code), the proxy captures both the credentials and the session cookie.
+Session Hijacking: The attacker uses the session cookie to impersonate the user, bypassing the need for credentials or MFA again for as long as the cookie is valid.
+Why This is a Big Problem
+Session Cookies Are the Weak Link: Even with MFA, a stolen session cookie grants attackers the same level of access as the legitimate user.
+Targeting MFA-Protected Accounts: As more organizations adopt MFA, attackers are focusing on AiTM techniques to compromise high-value accounts.
+The Solution: Passkeys
+Passkeys provide a modern, robust defense against these attacks. Unlike traditional credentials, passkeys rely on cryptographic principles that make phishing and AiTM attacks nearly impossible.
+
+How Passkeys Work
+Private and Public Key Pair: Passkeys generate a pair of cryptographic keys:
+The private key stays securely stored on the user’s device (in a Trusted Platform Module or a FIDO-2 key).
+The public key is shared with the service during registration.
+Passwordless Authentication: During login, the service sends a challenge encrypted with the public key. The user’s device uses the private key to decrypt and authenticate, ensuring that only the user can complete the login.
+Why Passkeys Stop AiTM
+No Shared Secrets: Passkeys don’t rely on shared secrets (e.g., passwords or session cookies). Without the private key, attackers can’t authenticate.
+Device-Based Security: The private key never leaves the device, making it inaccessible to attackers, even if they control a proxy.
+Proximity Requirements: When passkeys are used with features like QR code-based login, proximity ensures that authentication happens securely, even if an attacker intercepts the QR code.
+Passkey Types
+Device-Bound Passkeys: Stored locally in the device’s Trusted Platform Module (TPM) or on a FIDO-2 key, offering the highest security.
+Synced Passkeys: Synced across devices via password managers, providing a balance between security and convenience.
+Microsoft's Implementation
+Microsoft is actively integrating passkeys into its ecosystem, including:
+
+Microsoft Authenticator App: Enables QR code-based authentication tied to device proximity.
+Passwordless Authentication: Rolling out across Azure AD and other Microsoft services to eliminate traditional password-based logins.
+For a deep dive, check out Microsoft’s announcement on passkeys.
+
+Conclusion
+MitM and AiTM attacks expose the limitations of traditional MFA by exploiting session cookies. Passkeys are a game-changing solution, offering phishing-resistant, passwordless authentication that removes the weakest links in the chain. By integrating passkeys into your authentication strategy, you can significantly enhance security and stay ahead of evolving threats.
+
+The battle against cyber threats is ongoing, but with passkeys, we’re one step closer to a secure future.
