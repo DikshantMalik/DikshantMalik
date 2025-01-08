@@ -1,0 +1,72 @@
+Protecting Break Glass Accounts in Entra: Adapting to MFA Enforcement
+As Microsoft strengthens security across its platforms, Multi-Factor Authentication (MFA) is becoming mandatory for more administrative portals. This development underscores the need to revisit and enhance the security of break glass accounts. Relying solely on a username and password, even if complex, is no longer a viable approach.
+
+This shift aligns with Microsoft’s Secure Future Initiative, a response to the growing sophistication of cyber threats. Launched after a critical U.S. Cyber Safety Review Board (CSRB) report on a significant cyber incident, the initiative focuses on addressing vulnerabilities, enhancing authentication, and reducing reliance on outdated models like passwords. For detailed insights, see Microsoft’s official report.
+
+Current and Upcoming MFA Enforcement on Admin Portals
+MFA is already enforced on several admin portals, and more are being added. Importantly, this enforcement applies to break glass accounts, even if they are excluded from Conditional Access policies.
+
+Key MFA Enforcements
+Azure Portal: MFA is mandatory for all privileged roles.
+Azure DevOps: MFA enforcement is implemented for portal access.
+Microsoft 365 Admin Center: Starting February 3, 2025, MFA will be rolled out gradually, with notifications sent 30 days prior to enforcement for specific tenants. Refer to the official announcement.
+What’s Next?
+Microsoft plans to extend MFA requirements across all management interfaces. Administrators should proactively enable MFA to avoid disruptions. Stay updated with Microsoft’s latest guidelines:
+
+Microsoft Entra Security Operations Guide
+Microsoft 365 Security Center
+Best Practices for Managing Break Glass Accounts
+With MFA enforcement expanding, the management of break glass accounts must evolve to ensure security and compliance. Here are key best practices:
+
+1. Minimize the Number of Break Glass Accounts
+Maintain only the essential number of accounts to reduce security risks and streamline management.
+
+2. Use Phishing-Resistant MFA
+Leverage modern authentication methods like FIDO2 security keys to safeguard break glass accounts against phishing attacks.
+
+3. Monitor Activity
+Set up alerts to detect unusual or unauthorized access attempts.
+
+4. Train and Document
+Provide clear guidelines for using break glass accounts and train relevant personnel on emergency procedures.
+
+For detailed guidance, review Microsoft’s recommendations:
+
+Emergency Access Accounts in Azure AD
+Enhancing Protection with Authentication Method Policies
+Authentication method policies offer greater control over allowed methods, ensuring compliance with security best practices.
+
+Policy Example
+In a secure environment:
+
+Enabled: Passkeys, Microsoft Authenticator, Email OTP.
+Disabled: SMS, Hardware OATH tokens, Third-party OATH tokens, Voice calls, Certificate-based authentication.
+Exclusions: Break glass accounts and legacy service accounts are excluded from certain policies, while restricted by Conditional Access policies.
+Temporary Access Pass (TAP) can be used during account setup, with strict time limits and group membership for TAP-enabled users.
+
+Creating and Securing a Break Glass Account with a FIDO2 Key
+Here’s how to set up a secure break glass account:
+
+1. Account Creation
+Generate an account in Azure AD with a strong, temporary password.
+Assign privileged roles and exclude the account from all Conditional Access policies.
+2. Register a FIDO2 Security Key
+Access Security Info: Sign in and navigate to My Profile > Security Info.
+Add Method: Choose "Security key" and follow the prompts to register.
+Test Access: Verify the account can access necessary portals with the FIDO2 key.
+For step-by-step instructions, see:
+
+Manage Emergency Access Accounts in Azure AD
+Set Up FIDO2 Security Keys
+Is Email Still Relevant for Break Glass Accounts?
+While email notifications are often dismissed as outdated, they remain useful for critical alerts. However, many notifications can be captured through:
+
+SIEM Solutions
+Log Analytics
+Logic Apps
+Evaluate whether email fits into your overall alerting strategy or if alternative methods better suit your environment.
+
+Conclusion
+As MFA enforcement becomes the norm across Microsoft admin portals, securing break glass accounts is more critical than ever. By implementing phishing-resistant MFA methods like FIDO2 security keys and leveraging authentication method policies, organizations can ensure these accounts remain secure and accessible during emergencies.
+
+Stay proactive, stay secure, and ensure your emergency access is future-proof. Thank you for reading! 🚀
